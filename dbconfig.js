@@ -1,6 +1,6 @@
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-    host: 'sharing.ccctyzpxtafz.us-east-1.rds.amazonaws.com',
+    host: 'aaelm2e3aono8z.ccctyzpxtafz.us-east-1.rds.amazonaws.com',
     user: "admin",
     password: "spaceapps",
     database: "ebdb"

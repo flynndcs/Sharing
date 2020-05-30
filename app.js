@@ -3,8 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require("cors");
 
-var indexRouter = require('./routes/index');
+var wmtsRouter = require('./api/wmtsFetch.js')
 
 var app = express();
 
@@ -12,12 +13,15 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'client')));
 
+
+app.use('/wmtsFetch', wmtsRouter);
+app.use(express.static(path.join(__dirname, 'client')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
