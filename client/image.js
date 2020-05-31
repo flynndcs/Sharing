@@ -1,30 +1,15 @@
-<html>
-    <script>
-let tileArray;
-fetch('/wmtsFetch/20/20/8')
-    .then(response => response.text())
-                .then((text) => {
-                    console.log(text);
-                    tileValues = text;
-                }).then(() => {
-                    console.log(tileValues);
-                    tileArray = tileValues.split(" ");
-                    console.log(tileArray);
-                }).then(()=>{
-                    console.log(tileArray);
+var imgDiv = document.getElementById("img");
+console.log(imgDiv);
 
-                    fetch(`'https://gibs.earthdata.nasa.gov/wmts/epsg4326/best/VIIRS_SNPP_DayNightBand_ENCC/default/2020-01-01/500m/'${tileArray[0]}/${tileArray[1]}/8.png`)
-                        .then((response) => {
-                            console.log(response);
-                        })
+var imgDate = document.getElementById("imgSelect");
+console.log(imgDate.value);
 
-
-                })
-
+var selectedDate;
+imgDate.addEventListener('change', (event) => {
+    console.log(event.target.value);
+    selectedDate = event.target.value;
+    var fetchURL = "https://elasticbeanstalk-us-east-1-135815009727.s3.amazonaws.com/Sharing/Texas+Images/" + selectedDate + ".png";
+    console.log(fetchURL);
+    imgDiv.setAttribute('src', fetchURL)
 });
-</script>
-    <body>
-        <div>
-        </div>
-    </body>
-</html>
+
