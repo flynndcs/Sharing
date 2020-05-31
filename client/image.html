@@ -1,33 +1,17 @@
 <html>
-    <script>
-        let tileArray;
-        fetch('/wmtsFetch/6/31/-99')
-        .then(response => response.text())
-                .then((text) => {
-                    console.log(text);
-                    tileValues = text;
-                }).then(() => {
-                    console.log(tileValues);
-                    tileArray = tileValues.split(" ");
-                    console.log(tileArray);
-                }).then(()=>{
-                    console.log(tileArray);
-
-                    fetch('https://gibs.earthdata.nasa.gov/wmts/epsg4326/best/VIIRS_SNPP_DayNightBand_ENCC/default/2020-01-01/500m/' + `6/${tileArray[0]}/${tileArray[1]}.png`)
-                        .then((response) => {
-                            return response.blob()
-                        })
-                        .then(blob => {
-                            var img = URL.createObjectURL(blob);
-                            document.getElementById('img').setAttribute('src', img);
-                        })
-
-
-                })
-</script>
     <body>
+        <form>
+        <label for="imgSelect">Select Date:</label>
+        <input type="date" id="imgSelect"
+            value="2020-05-31"
+            min="2020-01-01"
+            max="2020-05-31">
+        </form>
         <div id="imageDiv">
+
             <img id="img">
         </div>
     </body>
+    <script src="image.js">
+    </script>
 </html>
