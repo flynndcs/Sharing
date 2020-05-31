@@ -26,7 +26,9 @@ function getPosts(event){
 
                 var content = document.createTextNode(res[i].post);
                 var likeContent = document.createTextNode(res[i].likes);
+                var br = document.createElement("br");
                 postDiv.appendChild(likeContent);
+                postDiv.appendChild(br);
                 postDiv.appendChild(content);
 
                 postList.appendChild(postDiv);
