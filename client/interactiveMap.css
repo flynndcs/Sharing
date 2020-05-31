@@ -1,0 +1,31 @@
+body {
+    align-items: center;
+    background-color: #2A2C39;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 200;
+    font-size: 17px;
+  }
+  #map-holder {
+    width: 100vw;
+    height: 100vh;
+  }
+  svg rect {
+    fill: #2A2C39;   /* map background colour */
+  }
+  .state{
+    fill: #d0d0d0;   /* state colour */
+    stroke: #2A2C39; /* state border colour */
+    stroke-width: 1; /* state border width */
+  }
+  .state-on{
+    fill: #4B5358;   /* highlight colour for selected state */
+  }
+  .stateLabel{
+    display: none;   /* hide all state labels by default */
+  }
+  .stateName{
+    fill: #FFFAFF;   /* state label text colour */
+  }
+  .stateLabelBg{
+    fill: #30BCED;   /* state label background colour */
+  }
