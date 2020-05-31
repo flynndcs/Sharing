@@ -18,9 +18,13 @@ function getPosts(event){
             console.log(res[0].post);
             for (let i = 0; i < res.length; i++){
                 var postDiv = document.createElement("div");
+                var likeButton = document.createElement("button")
+                likeButton.innerHTML = 'Like';
+                likeButton.setAttribute("id", "like" + i);
                 var content = document.createTextNode(res[i].post);
                 postDiv.appendChild(content);
                 postList.appendChild(postDiv);
+                postList.appendChild(likeButton);
             }
         }
 
