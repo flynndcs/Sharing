@@ -1,4 +1,22 @@
-body
+.postTh
 {
-    background-color: rgba(0, 0, 129, 0.507);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: whitesmoke;
+    text-align: center;
+}
+.typeAn
+{
+    color: rgb(163, 163, 163);
+    text-align: center;
+    margin-left: 1.6in;
+}
+.textbox
+{
+    height: 200px;
+    width:400px;
+    margin-left: 0in;
+}
+.submit
+{
+    margin-left: 4.5in;
 }
