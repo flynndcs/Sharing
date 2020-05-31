@@ -29,10 +29,11 @@ router.post("/like", function(req, res, next){
     if (!userSession.userName){
         userSession.userName = 'user' + Math.floor((Math.random() * 1000000) + 1);
     }
+    console.log(userSession.userName);
     connection.connect(function(err){
-        connection.query('UPDATE posts SET likes = likes + 1 WHERE post=?',
+        connection.query('UPDATE posts SET likes = likes + 1 WHERE post_id=?',
             [
-                req.body.post
+                req.body.post_id
             ],
             function(err, result)
             {

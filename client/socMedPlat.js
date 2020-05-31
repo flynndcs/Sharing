@@ -5,6 +5,8 @@ var submitButton = document.getElementById("postSubmit");
 
 submitButton.addEventListener('click', submitHandler);
 
+let likeButtonEventListeners = [];
+
 function getPosts(event){
     fetch('/select/posts')
         .then(response => {
@@ -21,11 +23,24 @@ function getPosts(event){
                 var likeButton = document.createElement("button")
                 likeButton.innerHTML = 'Like';
                 likeButton.setAttribute("id", "like" + i);
+
                 var content = document.createTextNode(res[i].post);
+                var likeContent = document.createTextNode(res[i].likes);
+                postDiv.appendChild(likeContent);
                 postDiv.appendChild(content);
+
                 postList.appendChild(postDiv);
                 postList.appendChild(likeButton);
+
+                var likeListener = document.getElementById(`like${i}`)
+                console.log(likeListener);
+                likeButtonEventListeners.push(likeListener);
+                console.log(likeButtonEventListeners);
             }
+            for (let j = 0; j < likeButtonEventListeners.length; j++){
+                likeButtonEventListeners[j].addEventListener("click", submitLike);
+            }
+
         }
 
         )
@@ -51,4 +66,20 @@ function submitHandler(event){
 });
 }
 
+function submitLike(event){
+    console.log("inside submit like");
+    var post_id = 1 + parseInt(event.target.id.replace("like", ""));
+    const data = {"post_id": post_id}
+    fetch("/create/like", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(res => res.json())
+        .then((data) => {
+            console.log("success: ", data);
+        })
+}
 window.addEventListener('load', getPosts);
