@@ -3,7 +3,7 @@ var connection = mysql.createConnection({
     host: 'aaelm2e3aono8z.ccctyzpxtafz.us-east-1.rds.amazonaws.com',
     user: "admin",
     password: "spaceapps",
-    database: "ebdb"
+    database: "db_sharing"
 });
 
 connection.connect(function(err) {

@@ -7,14 +7,12 @@
 .typeAn
 {
     color: rgb(163, 163, 163);
-    text-align: center;
     margin-left: 1.6in;
 }
 .textbox
 {
-    height: 200px;
+    height:200px;
     width:400px;
-    margin-left: 0in;
 }
 .submit
 {
