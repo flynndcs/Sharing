@@ -1,13 +1,16 @@
 <html>
     <body>
-        <form>
-        <label for="imgSelect">Select Date:</label>
+        <label for="imgSelect">Select Region and Date:</label>
+        <select id="citySelect">
+            <option value="North+Carolina+">North Carolina</option>
+            <option value="Pennsylvania+">Pennsylvania</option>
+            <option value="Texas+">Texas</option>
+        </select> 
         <input type="date" id="imgSelect"
             value="2020-05-31"
             min="2020-01-01"
             max="2020-05-31">
-        </form>
-        <div id="imageDiv">
+               <div id="imageDiv">
 
             <img id="img">
         </div>
