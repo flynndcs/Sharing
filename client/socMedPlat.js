@@ -24,11 +24,16 @@ function getPosts(event){
                 likeButton.innerHTML = 'Like';
                 likeButton.setAttribute("id", "like" + i);
 
+                var likeDiv = document.createElement("div");
+                likeDiv.setAttribute("id", "likeCount" + i);
+
                 var content = document.createTextNode(res[i].post);
                 var likeContent = document.createTextNode(res[i].likes);
-                postDiv.appendChild(likeContent);
+                var br = document.createElement("br");
+                likeDiv.appendChild(likeContent);
                 postDiv.appendChild(content);
 
+                postList.appendChild(likeDiv)
                 postList.appendChild(postDiv);
                 postList.appendChild(likeButton);
 
