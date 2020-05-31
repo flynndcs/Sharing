@@ -1,13 +1,13 @@
-<html>
-    Test2
-    <img id="img" src="">
-    <script>
-            let tileArray;
-            fetch('/wmtsFetch/20/20/8')
-                .then(response => response.text())
+var express = require("express");
+var router = express.Router();
+
+router.get("/", function(req, res, next){
+let tileArray;
+fetch('/wmtsFetch/20/20/8')
+    .then(response => response.text())
                 .then((text) => {
                     console.log(text);
-                    tileValues = text; 
+                    tileValues = text;
                 }).then(() => {
                     console.log(tileValues);
                     tileArray = tileValues.split(" ");
@@ -23,5 +23,6 @@
 
                 })
 
-    </script>
-</html>
+});
+module.exports = router;
+
