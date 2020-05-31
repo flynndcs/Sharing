@@ -1,9 +1,7 @@
 import math, sys
-def deg2num(lat_deg, lon_deg, zoom):
-    lat_rad = math.radians(lat_deg)
-    n = 2.0 ** zoom
-    xtile = int((lon_deg + 180.0) / 360.0 * n)
-    ytile = int((1.0 - math.asinh(math.tan(lat_rad)) / math.pi) / 2.0 * n)
+def deg2num(zoom, lat_deg, lon_deg):
+    xtile = ((90 - lat_deg) * ( 2 ** zoom )) // 288
+    ytile =  ((180 + lon_deg) * (2 ** zoom)) // 288
     print(xtile, ytile)
     return (xtile, ytile)
 

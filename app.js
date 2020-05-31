@@ -5,7 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require("cors");
 
-var wmtsRouter = require('./api/wmtsFetch.js')
+var imagePage = require('./api/image.js');
+var wmtsRouter = require('./api/wmtsFetch.js');
 
 var app = express();
 
@@ -21,6 +22,8 @@ app.use(cookieParser());
 
 
 app.use('/wmtsFetch', wmtsRouter);
+app.use('/image', imagePage);
+
 app.use(express.static(path.join(__dirname, 'client')));
 
 // catch 404 and forward to error handler
