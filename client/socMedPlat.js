@@ -48,7 +48,11 @@ function getPosts(event){
 
 function submitHandler(event){
     var postElement = document.getElementById("post");
-    var data = {"post": postElement.value}
+    var data = {
+        "post_id": "",
+        "post": postElement.value,
+
+    }
     console.log(postElement.value);
     fetch('create/post', {
     method: 'POST',

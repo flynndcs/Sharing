@@ -10,11 +10,13 @@ router.post("/post", function(req, res, next){
         userSession.userName = 'user' + Math.floor((Math.random() * 1000000) + 1);
     }
     connection.connect(function(err){
-        connection.query('INSERT INTO posts VALUES (?, ?, ?)',
+        connection.query('INSERT INTO posts VALUES (?, ?, ?, ?)',
             [
                 userSession.userName,
                 req.body.post,
-                0
+                0,
+                req.body.post_id
+
             ],
             function(err, result){
                 if (err) throw err;
