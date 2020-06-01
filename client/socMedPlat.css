@@ -1,8 +1,4 @@
-.layoutdiv {
-    display: inline-block
-}
-
-#postTh
+.postTh
 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: whitesmoke;
@@ -31,12 +27,14 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(136, 123, 87);
 }
-#icymi
+.icymi
 {
+    margin-left: 9in;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(132, 181, 201);
 }
 .postList
 {
-    margin-left: 7in;
+    margin-left: 9in;
+    margin-top:3.5in;
 }
