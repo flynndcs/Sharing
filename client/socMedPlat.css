@@ -6,15 +6,34 @@
 }
 .typeAn
 {
+    margin-top: -.5in;
     color: rgb(163, 163, 163);
+    text-align: center;
     margin-left: 1.6in;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .textbox
 {
-    height:200px;
+    height: 200px;
     width:400px;
+    margin-left: 0in;
 }
 .submit
 {
-    margin-left: 4.5in;
+    margin-left: 5.6in;
+    margin-top: .2cm;
+    width: 100px;
+    height:50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(136, 123, 87);
+}
+.icymi
+{
+    margin-left: 9in;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(132, 181, 201);
+}
+.postList
+{
+    margin-left: 7in;
 }
