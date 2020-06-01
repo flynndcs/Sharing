@@ -1,6 +1,12 @@
 <html>
+    <head>
+        <link href="image.css" rel="stylesheet">
+    </head>
     <body>
-        <a href="socMedPlat.html">Share your thoughts!</a>
+        <div id="socialLink"><a href="socMedPlat.html">Share your story, and bring light to your community.</a></div>
+        <br>
+        <div>COVID-19 has profoundly affected human activity. To view daily satellite imagery from NASA and observe changes in luminescence due to the pandemic, select the prompts below.</div>
+        <br>
         <label for="imgSelect">Select Region and Date:</label>
         <select id="citySelect">
             <option value="">Choose a state:</option>
@@ -12,8 +18,7 @@
             value="2020-05-31"
             min="2020-01-01"
             max="2020-05-31">
-               <div id="imageDiv">
-
+        <div id="imageDiv">
             <img id="img">
         </div>
     </body>
