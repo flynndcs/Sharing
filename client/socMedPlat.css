@@ -1,8 +1,14 @@
-.postTh
+.layoutdiv {
+    display: inline-block;
+    text-align: left;
+}
+
+#postTh
 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: whitesmoke;
     text-align: center;
+    vertical-align: top
 }
 .typeAn
 {
@@ -14,9 +20,8 @@
 }
 .textbox
 {
-    height: 200px;
+    height:200px;
     width:400px;
-    margin-left: 0in;
 }
 .submit
 {
@@ -27,9 +32,9 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(136, 123, 87);
 }
-.icymi
+
+#icymi
 {
-    margin-left: 9in;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: rgb(132, 181, 201);
 }
