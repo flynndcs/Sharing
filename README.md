@@ -10,8 +10,7 @@ Our website provides a resource for those seeking to learn about the impact of C
 
 The satellite imagery used is sourced from VIIRS_SNPP_DayNightBand_ENCC, and accessed using the GIBS API and WMTS.
 
-Hosted on AWS:
-http://sharing-env.eba-3y9b8ijn.us-east-1.elasticbeanstalk.com/
+Previously hosted on AWS.
 
 To compile and run:
 1. Clone repo
