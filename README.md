@@ -1,4 +1,4 @@
-COVID-19 NASA Space Apps Challenge
+# COVID-19 NASA Space Apps Challenge
 
 Sharing
 
@@ -12,7 +12,7 @@ The satellite imagery used is sourced from VIIRS_SNPP_DayNightBand_ENCC, and acc
 
 Previously hosted on AWS.
 
-To compile and run:
-1. Clone repo
-2. in root directory, run npm install then npm start
-3. site is accessible at localhost:3000
+## Installation 
+
+In root directory, run npm install then npm start.
+Access site at localhost:3000!
