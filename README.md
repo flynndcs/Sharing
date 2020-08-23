@@ -10,7 +10,7 @@ Our website provides a resource for those seeking to learn about the impact of C
 
 The satellite imagery used is sourced from VIIRS_SNPP_DayNightBand_ENCC, and accessed using the GIBS API and WMTS.
 
-Previously hosted on AWS.
+Previously hosted on AWS, and due to a db restore, the social media function is for presentation only.
 
 ## Installation 
 
